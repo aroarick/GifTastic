@@ -4,32 +4,38 @@
  rgb(253, 218, 37) YELLOW*/
 
 body {
-    background: rgb(51, 0, 114);
-    background: linear-gradient(90deg, rgba(51, 0, 114, 1) 0%, rgba(33, 23, 71, 1) 35%, rgba(34, 28, 53, 1) 100%);
+    background: rgb(33, 35, 34);
+    /* background: linear-gradient(90deg, rgba(51, 0, 114, 1) 0%, rgba(33, 23, 71, 1) 35%, rgba(34, 28, 53, 1) 100%); */
     font-family: 'Notable', sans-serif;
 }
 
 h1 {
     letter-spacing: 2px;
-    color: rgb(199, 36, 177);
+    color: rgb(33, 35, 34);
     text-align: center;
-    text-shadow: 0 0 0.5em rgb(136, 219, 223), 0 0 0.2em rgb(136, 219, 223),
-    0 0 0.2em rgb(136, 219, 223);
+    text-shadow: 0 0 0.5em rgb(219, 11, 91), 0 0 0.2em rgb(219, 11, 91),
+    0 0 0.2em rgb(219, 11, 91);
+}
+
+h2 {
+    color: white;
 }
 
 hr {
-    border: 2px dotted rgb(136, 219, 223);
+    border: 2px dotted rgb(219, 11, 91);
 }
 
-
-
 .btn-80s {
-    background-color: rgb(199, 36, 177);
-    color: white;
+    background-color: rgb(219, 11, 91);
+    color: rgb(33, 35, 34);
     margin-right: 10px;
     margin-bottom: 10px;
 }
 
 #newTerm {
     width: 85%;
+}
+
+#gifHolder img{
+    width: 300px;
 }
