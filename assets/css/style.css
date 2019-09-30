@@ -1,34 +1,35 @@
 /* COLOUR SCHEME
  rgb(33, 35, 34) BLACK
- rgb(217, 134, 186) PINK
- rgb(253, 218, 37) YELLOW*/
+ rgb(219, 11, 91) PINK*/
 
 body {
-    background: rgb(33, 35, 34);
+    background: black;
     /* background: linear-gradient(90deg, rgba(51, 0, 114, 1) 0%, rgba(33, 23, 71, 1) 35%, rgba(34, 28, 53, 1) 100%); */
     font-family: 'Notable', sans-serif;
+    
 }
 
 h1 {
     letter-spacing: 2px;
-    color: rgb(33, 35, 34);
+    color: rgb(255, 164, 0);
     text-align: center;
-    text-shadow: 0 0 0.5em rgb(219, 11, 91), 0 0 0.2em rgb(219, 11, 91),
-    0 0 0.2em rgb(219, 11, 91);
+    text-shadow: 0 0 0.8em rgb(59, 63, 182), 0 0 0.5em rgb(59, 63, 182),
+        0 0 0.5em rgb(59, 63, 182);
 }
 
 h2 {
-    color: rgb(219, 11, 91);
+    color: rgb(255, 164, 0);
     text-align: center;
 }
 
 hr {
-    border: 2px dotted rgb(219, 11, 91);
+    border: 2px dashed rgb(59, 63, 182);
 }
 
 .btn-80s {
-    background-color: rgb(219, 11, 91);
-    color: rgb(33, 35, 34);
+    font-family: 'Righteous', cursive;
+    background-color: rgb(255, 164, 0);
+    color: black;
     margin-right: 10px;
     margin-bottom: 10px;
 }
@@ -37,7 +38,7 @@ hr {
     width: 85%;
 }
 
-#gifHolder img{
+#gifHolder img {
     width: 300px;
     margin-right: 70px;
     margin-bottom: 10px;
