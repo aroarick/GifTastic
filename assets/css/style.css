@@ -18,7 +18,8 @@ h1 {
 }
 
 h2 {
-    color: white;
+    color: rgb(219, 11, 91);
+    text-align: center;
 }
 
 hr {
@@ -38,4 +39,6 @@ hr {
 
 #gifHolder img{
     width: 300px;
+    margin-right: 70px;
+    margin-bottom: 10px;
 }
