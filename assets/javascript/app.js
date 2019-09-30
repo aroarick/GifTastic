@@ -8,6 +8,7 @@ var apiConfig = {
     lang: "en"
 }
 
+// puts comma in number 
 const formatter = new Intl.NumberFormat('en-US', {
     minimumFractionDigits: 0
 })
@@ -15,7 +16,7 @@ const formatter = new Intl.NumberFormat('en-US', {
 // array of pre-made buttons 
 var buttonItems = ["Beastie Boys", "Madonna", "Duran Duran", "Gremlins", "Dirty Dancing", "ET", "The Golden Girls"];
 
-// 
+// when page is loaded buttons are loaded to be clicked
 $(document).ready(function () {
     $("#newTermButton").on("click", newTermButtonClick);
     $("#buttonContainer").on("click", searchTermButtonClick);
@@ -23,12 +24,14 @@ $(document).ready(function () {
     init();
 });
 
+// puts items in array into buttons
 function init() {
     for (var i = 0; i < buttonItems.length; i++) {
         addNewSearchButton(buttonItems[i]);
     }
 }
 
+// a new term is added and can be clicked 
 function newTermButtonClick() {
     var newTerm = $("#newTerm").val();
     addNewSearchButton(newTerm);
@@ -36,6 +39,7 @@ function newTermButtonClick() {
     $("#newTerm").val("");
 }
 
+// if there is a word in the search bar it is added to the array
 function addNewSearchButton(text) {
     if (text != "") {
         var html = '<button class="btn btn-80s btn-lg search-term">' + text + '</button>';
@@ -43,6 +47,7 @@ function addNewSearchButton(text) {
     }
 }
 
+// get gifs from giphy
 function searchTermButtonClick(e) {
     if (e.target.tagName === "BUTTON") {
         console.log(e);
@@ -63,6 +68,7 @@ function searchTermButtonClick(e) {
     }
 }
 
+// add the gifs to the page
 function addImagesToPage(data) {
     console.log(data);
     $("#gifHolder").empty();
@@ -77,6 +83,7 @@ function addImagesToPage(data) {
     }
 }
 
+//when gif is clicked it moves then when clicked again it stops
 function gifClick(e) {
     if (e.target.tagName === "IMG") {
         var src = $(e.target).attr("src");
