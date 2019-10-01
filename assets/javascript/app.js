@@ -1,8 +1,8 @@
 // object for api configurations
 var apiConfig = {
     apiKey: "hdEIZ9OWKiC5QBl6cjaNByz72GrXMRec",
-    url: "http://api.giphy.com/v1/gifs/search",
-    limit: 20,
+    url: "https://api.giphy.com/v1/gifs/search",
+    limit: 10,
     offset: 0,
     rating: "g",
     lang: "en"
@@ -63,6 +63,7 @@ function searchTermButtonClick(e) {
                 lang: apiConfig.lang
             })
             .done(function (data) {
+                console.log(data);
                 addImagesToPage(data);
             });
     }
@@ -76,12 +77,21 @@ function addImagesToPage(data) {
     $("#info").text(data.pagination.count + " of " + formatter.format(data.pagination.total_count));
     for (var j = 0; j < data.data.length; j++) {
         var item = data.data[j];
+        // console.log(item.rating);
+        var p = $("<p>");
+        p.text(data.data[j].rating);
+        var p = $("<p>").text("Rating: " + data.data[j].rating);
         var stillImage = item.images['480w_still'].url;
         var movingImage = item.images.original.url;
         $("#gifHolder").append('<img data-still-src="' + stillImage + '" data-moving-src="' + movingImage + '" src="' + stillImage + '">');
-
     }
 }
+
+// function addRatingToPage() {
+//     $("<p>").text("Rating: " + apiConfig.rating);
+//     $("<div>").append(apiConfig.rating);
+//     console.log(apiConfig.rating);
+// } 
 
 //when gif is clicked it moves then when clicked again it stops
 function gifClick(e) {

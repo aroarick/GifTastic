@@ -26,6 +26,11 @@ hr {
     border: 2px dashed rgb(59, 63, 182);
 }
 
+#ratingHolder {
+    border: 2px solid white;
+    color: white;
+}
+
 .btn-80s {
     font-family: 'Righteous', cursive;
     background-color: rgb(255, 164, 0);
